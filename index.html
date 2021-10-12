@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color:#000;
+
+
+        }
+
+        #container>div {
+            margin: 10% 40%;
+        }
+
+        #krug {
+
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            z-index: 1;
+            position: relative;
+            border-radius: 50%;
+            animation: rotation 1.5s linear infinite;
+        }
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        #krug::after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border-radius: 50%;
+            filter: blur(40px);
+            
+        }
+
+        #pozadina {
+
+            width: 460px;
+            height: 460px;
+            background-color: #000;
+
+            position: absolute;
+            z-index: 2;
+            margin: 0;
+            left: 20px;
+            top: 20px;
+            border-radius: 50%;
+        }
+
+        #puls {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #050210;
+            position: absolute;
+            z-index: 100;
+            top: 240px;
+            left: 240px;
+            animation: animate 2s ease-out infinite;
+            
+
+        }
+        
+        #puls1{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #050210;
+            position: absolute;
+            z-index: 13;
+            top: 240px;
+            left: 240px;
+            animation: animate 2s 1s ease-out infinite;
+          
+            
+        }
+         /*
+        
+                @keyframes animate{
+            
+            0%{
+                box-shadow: 0 0 0 0 #050210;
+                
+            }
+
+
+            100%{
+                box-shadow: 0 0 0 220px #050210;
+                opacity: 0.7;  
+            }
+
+        }
+        */
+        
+      
+        
+        
+        @keyframes animate{
+       100%{
+            transform: scale(23);
+            opacity: 0.7;
+                        
+           }
+              
+        
+
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="krug"></div>
+        <div id="pozadina"></div>
+        <div id="puls" class="puls"></div>
+        <div id="puls1" class="puls"></div>
+    </div>
+
+</body>
+
+</html>
